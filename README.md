@@ -1,71 +1,37 @@
-# RAG Chatbot with Mistral AI
+# 🧠 Retrieval-Augmented Generation (RAG) Project
 
-A Retrieval-Augmented Generation (RAG) chatbot built with Flask and Mistral AI.
+Dit project implementeert een Retrieval-Augmented Generation (RAG) pipeline, waarmee een Large Language Model (LLM) wordt verrijkt met informatie uit externe documenten. Het doel is om contextuele, accurate en traceerbare antwoorden te genereren op basis van je eigen data.
 
-**Created by [Halim Madi](https://www.halimmadi.com)**
+## ⚙️ Werking
 
-This is a sample project designed for students, workshops, and educational purposes. Feel free to use, modify, and distribute this code as you wish for learning and development.
+De RAG-pipeline bestaat uit drie hoofdonderdelen:
 
-## About the Creator
+1. **Documentinvoer:** Documenten (bijv. PDF, tekstbestanden of webpagina’s) worden automatisch geparsed en opgesplitst.
+2. **Indexeren:** Inhoud wordt omgezet in vectoren en opgeslagen in een vector-database.
+3. **Antwoordgeneratie:** Bij een gebruikersvraag zoekt het systeem relevante passages op en geeft deze als context aan het LLM, dat vervolgens een antwoord genereert.
 
-- **Website**: [www.halimmadi.com](https://www.halimmadi.com)
-- **Instagram**: [@yalla_halim](https://www.instagram.com/yalla_halim/)
+## 🎯 Toepassingen
 
-## Setup
+- Interne kennisbanken
+- Chatbots op basis van bedrijfsdocumentatie
+- AI-ondersteunde zoek- en hulpsystemen
+- Educatieve of juridische documentanalyse
 
-1. Clone the repository
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Create a `.env` file with your Mistral API key:
-   ```
-   MISTRAL_API_KEY=your_api_key_here
-   ```
-5. Add your text file as `essay.txt` in the project root
+## 🧩 Technologieën (voorbeeld)
 
-## Local Development
+- LLM: OpenAI GPT, Mistral, LLaMA
+- Vector search: FAISS, Chroma, Weaviate
+- Tooling: LangChain, LlamaIndex, Streamlit, FastAPI
 
-Run the Flask application:
-```bash
-python app.py
-```
+## 📂 Structuur (indicatief)
+/data/          → ruwe documenten
+/embeddings/    → vectorrepresentaties
+/retriever/     → zoek- en matchinglogica
+/generator/     → prompt + LLM-integratie
+app.py          → UI of API-entrypoint
 
-The application will be available at `http://localhost:5001`
+## 📄 Licentie
 
-## Deployment to Vercel
+Dit project is open-source en vrij te gebruiken onder de MIT-licentie.
 
-1. Push your code to GitHub
-2. Connect your GitHub repository to Vercel
-3. Add your environment variables in the Vercel dashboard:
-   - `MISTRAL_API_KEY`: Your Mistral API key
-4. Deploy!
-
-## Environment Variables
-
-- `MISTRAL_API_KEY`: Your Mistral AI API key (required)
-
-## Project Structure
-
-- `app.py`: Main Flask application
-- `templates/`: HTML templates
-- `static/`: Static files (CSS, JS)
-- `essay.txt`: Source text for the RAG system
-- `requirements.txt`: Python dependencies
-- `vercel.json`: Vercel deployment configuration
-
-## Usage and Licensing
-
-This project is provided as a learning resource for students and workshop participants. You are free to:
-
-- Use this code for educational purposes
-- Modify and adapt it for your own projects
-- Share it with others for learning
-- Use it in workshops and tutorials
-
-Feel free to reach out to [Halim Madi](https://www.halimmadi.com) with any questions or feedback! 
+---
