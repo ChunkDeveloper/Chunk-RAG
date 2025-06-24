@@ -1,91 +1,115 @@
-Retrieval-Augmented Generation: A Comprehensive Analysis of Modern AI Systems
-
-Introduction
-
-Retrieval-Augmented Generation (RAG) represents a paradigm shift in artificial intelligence, combining the power of large language models with external knowledge retrieval to create more accurate, factual, and contextually relevant responses. This hybrid approach addresses one of the fundamental limitations of traditional language models: their static knowledge cutoff and inability to access real-time or domain-specific information. RAG systems have emerged as a critical solution for applications requiring up-to-date information, factual accuracy, and domain expertise.
-
-The fundamental architecture of RAG consists of two primary components: a retrieval system that searches through external knowledge sources and a generation system that produces responses based on both the retrieved information and the model's pre-trained knowledge. This dual approach enables RAG systems to provide more reliable, verifiable, and contextually appropriate responses compared to standalone language models.
-
-Historical Context and Development
-
-The concept of combining retrieval with generation in natural language processing has evolved significantly over the past decade. Early approaches focused on simple document retrieval followed by template-based response generation. However, the advent of transformer-based language models and advances in information retrieval techniques have enabled more sophisticated integration between these components.
-
-The term "Retrieval-Augmented Generation" was popularized by Lewis et al. in their 2020 paper, which introduced a framework for combining dense retrieval with sequence-to-sequence generation. This work demonstrated that RAG systems could outperform traditional language models on knowledge-intensive tasks while maintaining fluency and coherence in generated text.
-
-Since then, RAG has become increasingly prevalent in commercial applications, with major technology companies implementing RAG-based systems for customer service, content generation, and information retrieval. The approach has proven particularly valuable in domains where accuracy and timeliness are critical, such as healthcare, finance, and legal services.
-
-Architecture and Components
-
-RAG systems typically employ a three-stage pipeline: indexing, retrieval, and generation. The indexing stage involves processing and storing external knowledge sources in a format optimized for efficient retrieval. This often includes creating dense vector representations of documents using encoder models, which enable semantic similarity searches.
-
-The retrieval stage identifies the most relevant documents or passages from the knowledge base given a user query. This can be accomplished through various methods, including sparse retrieval (e.g., BM25), dense retrieval using neural encoders, or hybrid approaches that combine multiple retrieval strategies. The retrieved documents are then ranked and filtered to select the most relevant information for the generation stage.
-
-The generation stage combines the retrieved information with the user's query to produce a coherent and accurate response. This typically involves a large language model that has been fine-tuned to incorporate external knowledge effectively. The model must learn to balance information from the retrieved documents with its pre-trained knowledge, ensuring that the final response is both factual and contextually appropriate.
-
-Key Advantages and Benefits
-
-RAG systems offer several significant advantages over traditional language models. First and foremost, they address the knowledge cutoff problem by enabling access to current information. This is particularly important for applications requiring up-to-date data, such as news analysis, financial reporting, or technical documentation.
-
-Second, RAG systems improve factual accuracy by grounding responses in verifiable sources. This reduces the likelihood of hallucination, a common problem with large language models where they generate plausible but incorrect information. By retrieving relevant documents, RAG systems can provide citations and evidence for their responses, increasing transparency and trustworthiness.
-
-Third, RAG enables domain-specific customization without requiring extensive retraining. Organizations can simply update their knowledge base with relevant documents, allowing the system to provide specialized information without modifying the underlying language model. This makes RAG particularly valuable for enterprise applications where domain expertise is critical.
-
-Fourth, RAG systems can handle long-form content more effectively than traditional language models, which often have context length limitations. By retrieving relevant passages, RAG can process and synthesize information from documents that exceed the model's maximum input length.
-
-Applications and Use Cases
-
-RAG systems have found widespread application across numerous domains. In customer service, RAG-powered chatbots can access product documentation, FAQs, and knowledge bases to provide accurate and helpful responses to customer inquiries. This reduces the need for human intervention while improving customer satisfaction through more relevant and accurate information.
-
-In healthcare, RAG systems can assist medical professionals by retrieving relevant research papers, clinical guidelines, and patient records. This enables more informed decision-making while ensuring that recommendations are based on current medical knowledge and best practices.
-
-In legal services, RAG can help lawyers and legal professionals by retrieving relevant case law, statutes, and legal precedents. This accelerates legal research and ensures that legal advice is grounded in current and applicable legal frameworks.
-
-In education, RAG systems can provide personalized tutoring by retrieving relevant educational materials and adapting explanations to individual student needs. This enables more effective learning experiences while ensuring that information is accurate and up-to-date.
-
-In content creation, RAG can assist writers and journalists by retrieving relevant background information, statistics, and source materials. This improves the quality and accuracy of generated content while reducing research time.
-
-Technical Challenges and Limitations
-
-Despite their advantages, RAG systems face several technical challenges that must be addressed for optimal performance. One of the primary challenges is retrieval quality, which directly impacts the accuracy of generated responses. Poor retrieval can lead to irrelevant information being incorporated into responses, reducing overall quality.
-
-Retrieval quality depends on several factors, including the quality of the knowledge base, the effectiveness of the retrieval model, and the relevance ranking algorithms. Ensuring comprehensive coverage of the target domain while maintaining high-quality, up-to-date information requires significant ongoing effort and resources.
-
-Another challenge is the integration between retrieval and generation components. The retrieved information must be effectively incorporated into the generation process without disrupting the fluency and coherence of the response. This requires careful tuning of the generation model and potentially specialized training approaches.
-
-Context length limitations remain a challenge, particularly when dealing with long documents or multiple retrieved passages. While RAG can help address this by retrieving relevant portions of documents, there are still practical limits on how much retrieved information can be effectively incorporated into a single response.
-
-Privacy and security concerns also arise when RAG systems access external knowledge sources. Organizations must ensure that sensitive information is properly protected and that access controls are implemented to prevent unauthorized retrieval of confidential data.
-
-Evaluation and Metrics
-
-Evaluating RAG systems requires a comprehensive approach that considers both retrieval and generation quality. Traditional metrics for information retrieval, such as precision, recall, and mean reciprocal rank, are important for assessing the quality of the retrieval component.
-
-For the generation component, metrics such as BLEU, ROUGE, and BERTScore can be used to evaluate fluency and coherence. However, these metrics may not fully capture the factual accuracy and relevance of RAG-generated responses.
-
-Human evaluation remains crucial for assessing the overall quality of RAG systems. This typically involves human annotators evaluating responses for accuracy, relevance, fluency, and helpfulness. Human evaluation can identify issues that automated metrics may miss, such as subtle factual errors or inappropriate tone.
-
-Recent research has also introduced specialized metrics for RAG evaluation, such as faithfulness (measuring how well the response reflects the retrieved information) and answerability (measuring whether the retrieved information is sufficient to answer the query).
-
-Future Directions and Research Opportunities
-
-The field of RAG continues to evolve rapidly, with several promising research directions emerging. One area of active research is improving retrieval quality through more sophisticated retrieval models and ranking algorithms. This includes exploring multi-modal retrieval, which can incorporate images, audio, and other media types alongside text.
-
-Another promising direction is the development of more efficient RAG architectures that can handle larger knowledge bases and provide faster response times. This includes research into approximate retrieval methods, caching strategies, and distributed retrieval systems.
-
-Personalization and adaptation represent another important research area. Future RAG systems may be able to learn user preferences and adapt their retrieval and generation strategies accordingly. This could enable more personalized and contextually appropriate responses.
-
-Integration with other AI technologies, such as reasoning systems and knowledge graphs, could further enhance RAG capabilities. This could enable more sophisticated reasoning about retrieved information and better integration of structured and unstructured knowledge.
-
-Ethical considerations and responsible AI development will also be crucial for the future of RAG. This includes addressing issues of bias in retrieval and generation, ensuring transparency in information sources, and developing methods for detecting and mitigating misinformation.
-
-Conclusion
-
-Retrieval-Augmented Generation represents a significant advancement in artificial intelligence, offering a practical solution to many of the limitations of traditional language models. By combining the power of large language models with external knowledge retrieval, RAG systems can provide more accurate, factual, and contextually relevant responses.
-
-The widespread adoption of RAG across various domains demonstrates its practical value and potential for impact. However, realizing the full potential of RAG requires addressing technical challenges, developing appropriate evaluation methods, and ensuring responsible deployment.
-
-As the field continues to evolve, RAG systems are likely to become increasingly sophisticated and capable. Future developments in retrieval quality, generation integration, and system efficiency will enable new applications and use cases that are currently beyond reach.
-
-The success of RAG also highlights the importance of hybrid approaches in artificial intelligence, where combining multiple techniques can achieve better results than any single approach alone. This lesson is likely to influence the development of other AI systems and applications in the years to come.
-
-Ultimately, RAG represents not just a technical innovation but a fundamental shift in how we think about AI systems and their relationship with knowledge. By enabling AI to access and utilize external information effectively, RAG opens new possibilities for creating more intelligent, useful, and trustworthy AI applications that can better serve human needs and goals. 
+Artikel 1.	Definities
+Met Motorrr wordt in dit document bedoeld Motorrr B.V.
+Artikel 2.	Overeenkomst, offerte en bevestiging
+2.1	Toepasselijkheid algemene voorwaarden 
+Deze algemene voorwaarden zijn van toepassing op de totstandkoming, de inhoud en de nakoming van alle tussen de opdrachtgever en Motorrr gesloten overeenkomsten.
+2.2	Offerte 
+Offertes zijn 2 maanden geldig. Prijsopgaven kunnen wijzigingen ondergaan door een onvoorziene verandering in de werkzaamheden.
+2.3	Schriftelijke bevestiging 
+Opdrachten dienen door de opdrachtgever schriftelijk te worden bevestigd. Indien de opdrachtgever dit nalaat, maar er desondanks mee instemt dat Motorrr een aanvang met het uitvoeren van de opdracht maakt, dan zal de inhoud van de offerte als overeengekomen gelden. 
+2.4	Meerdere opdrachtnemers 
+Wanneer de opdrachtgever eenzelfde opdracht tegelijkertijd aan anderen dan deze opdrachtnemer wenst te verstrekken, dient hij Motorrr, onder vermelding van de namen van deze anderen, hiervan op de hoogte te stellen.
+2.5	Eenzelfde opdracht eerder aan ander verstrekt 
+Indien een opdrachtgever eenzelfde opdracht reeds eerder aan een ander heeft verstrekt, dient hij Motorrr, onder vermelding van de naam van de ander, hiervan op de hoogte te stellen.
+Artikel 3.	De uitvoering van de overeenkomst
+3.1	Uitvoeren opdracht 
+Motorrr zal zich inspannen de opdracht zorgvuldig en onafhankelijk uit te voeren, de belangen van de opdrachtgever naar beste weten te behartigen en te streven naar een voor de opdrachtgever bruikbaar resultaat. Voor zover noodzakelijk zal Motorrr de opdrachtgever op de hoogte houden van de voortgang van de werkzaamheden.
+3.2	Verstrekken van gegevens 
+De opdrachtgever is gehouden al datgene te doen, wat redelijkerwijs nodig of wenselijk is om een tijdige en juiste levering door Motorrr mogelijk te maken, zulks in het bijzonder door het tijdig (laten) aanleveren van volledige, deugdelijke en duidelijke gegevens of materialen.
+3.3	Aanvraag offertes toeleveranciers 
+Indien Motorrr op verzoek van de opdrachtgever een begroting voor kosten van derden opstelt, dan zal deze begroting slechts een indicatieve strekking hebben. Desgewenst kan Motorrr namens de opdrachtgever offertes aanvragen.
+3.4	Gebruik toeleveranciers 
+Tenzij anders overeengekomen, worden opdrachten aan derden, in het kader van de totstandkoming van het ontwerp, door of namens de opdrachtgever verstrekt. Op verzoek van de opdrachtgever kan Motorrr, voor rekening en risico van de opdrachtgever, als gemachtigde optreden. Partijen kunnen hiervoor een nader overeen te komen vergoeding afspreken. Indien bij de uitvoering van de opdracht Motorrr volgens uitdrukkelijke afspraak voor eigen rekening en risico goederen of diensten van derden betrekt, waarna deze goederen of diensten worden doorgegeven aan de opdrachtgever, dan zullen de bepalingen uit de algemene voorwaarden van de toeleverancier met betrekking tot de kwaliteit, kwantiteit, hoedanigheid en levering van deze goederen of diensten ook gelden jegens de opdrachtgever.
+3.5	Openbaarmaking en verveelvoudiging 
+Alvorens tot productie, verveelvoudiging of openbaarmaking wordt overgegaan dienen partijen elkaar in de gelegenheid te stellen de laatste modellen, prototypes of proeven van het ontwerp te controleren en goed te keuren. Indien Motorrr, al dan niet in naam van de opdrachtgever, opdrachten of aanwijzingen aan productiebedrijven of andere derden zal geven, dan dient de opdrachtgever op verzoek van Motorrr zijn hierboven genoemde goedkeuring schriftelijk te bevestigen.
+3.6	Termijn van levering 
+Een door Motorrr opgegeven termijn voor het volbrengen van het ontwerp heeft een indicatieve strekking, tenzij uit de aard of de inhoud van de overeenkomst anders blijkt. Motorrr is, ook bij een opgegeven termijn voor het volbrengen van het ontwerp, eerst in verzuim nadat de opdrachtgever hem/haar bij aangetekend schrijven in gebreke heeft gesteld en nakoming binnen de in de ingebrekestelling genoemde redelijke termijn uitblijft.
+3.7	Tests, vergunningen en wettelijke bepalingen 
+Tenzij anders is overeengekomen behoren het uitvoeren van tests, het aanvragen van vergunningen en het beoordelen of instructies van de opdrachtgever voldoen aan wettelijke- of kwaliteitsnormen niet tot de opdracht van Motorrr.
+3.8	Klachten 
+Klachten dienen zo spoedig mogelijk, maar in ieder geval binnen tien werkdagen na afronding van de opdracht, schriftelijk aan Motorrr te worden meegedeeld. 
+Artikel 4.	Rechten van intellectuele eigendom en eigendomsrechten
+4.1	Auteursrecht en industriële eigendom 
+Tenzij anders overeengekomen, komen alle uit de opdracht voortkomende rechten van intellectuele eigendom- waaronder het octrooirecht, het modelrecht en het auteursrecht- toe aan Motorrr. Voor zover een dergelijk recht slechts verkregen kan worden door een depot of registratie, dan is uitsluitend Motorrr daartoe bevoegd.
+4.2	Onderzoek naar het bestaan van rechten 
+Tenzij anders overeengekomen, behoort niet tot de opdracht het uitvoeren van onderzoek naar het bestaan van octrooirechten, merkrechten, tekening- of modelrechten, auteursrechten en portretrechten van derden. Ditzelfde geldt voor een eventueel onderzoek naar de mogelijkheid van dergelijke beschermingsvormen voor de opdrachtgever.
+4.3	Naamsvermelding 
+Tenzij het werk er zich niet voor leent, is Motorrr te allen tijde gerechtigd om haar naam op of bij het werk te (laten) vermelden of verwijderen en is het de opdrachtgever niet toegestaan zonder voorafgaande toestemming het werk zonder vermelding van de naam van Motorrr openbaar te maken of te verveelvoudigen.
+4.4	Eigendom bij opdrachtnemer 
+Tenzij anders is overeengekomen, blijven de in het kader van de opdracht door Motorrr tot stand gebrachte werktekeningen, illustraties, prototypes, maquettes, mallen, ontwerpen, ontwerpschetsen, films en andere materialen of (elektronische) bestanden, eigendom van Motorrr, ongeacht of deze aan de opdrachtgever of aan derden ter hand zijn gesteld.
+Artikel 5.	Gebruik en licentie
+5.1	Het gebruik 
+Wanneer de opdrachtgever volledig voldoet aan zijn verplichtingen ingevolge de overeenkomst met Motorrr, verkrijgt hij een exclusieve licentie tot het gebruik van het ontwerp voorzover dit betreft het recht van openbaarmaking en verveelvoudiging overeenkomstig de bij de opdracht overeengekomen bestemming. Zijn er over de bestemming geen afspraken gemaakt, dan blijft de licentieverlening beperkt tot dat gebruik van het ontwerp, waarvoor op het moment van het verstrekken van de opdracht vaststaande voornemens bestonden. Deze voornemens dienen aantoonbaar voor het sluiten van de overeenkomst aan Motorrr bekend te zijn gemaakt.
+5.2	Wijzigingen 
+Tenzij anders is overeengekomen, is het de opdrachtgever niet toegestaan om zonder schriftelijke toestemming van Motorrr veranderingen in de voorlopige of definitieve ontwerpen, aan te brengen of te laten aanbrengen.
+5.3	Eigen promotie 
+Motorrr heeft met inachtneming van de belangen van de opdrachtgever, de vrijheid om het ontwerp te gebruiken voor zijn eigen publiciteit of promotie.
+ 
+Artikel 6.	Honorarium
+6.1	Honorarium en bijkomende kosten 
+Naast het overeengekomen honorarium komen ook de kosten, die Motorrr voor de uitvoering van de opdracht maakt, voor vergoeding in aanmerking.
+6.2	Honorarium voor meerwerk 
+Indien Motorrr door het niet tijdig of niet aanleveren van volledige, deugdelijke en duidelijke gegevens/materialen of door een gewijzigde hetzij onjuiste opdracht of briefing genoodzaakt is meer of andere werkzaamheden te verrichten, zullen deze werkzaamheden apart worden gehonoreerd, op basis van de gebruikelijk door Motorrr gehanteerde honorariumtarieven.
+6.3	Accountantsonderzoek 
+Indien de honorering op enige wijze afhankelijk is gesteld van feiten of omstandigheden, die moeten blijken uit de administratie van de opdrachtgever, heeft Motorrr na een opgave van de opdrachtgever het recht de administratie van de opdrachtgever door een registeraccountant te laten controleren. Indien uit zo'n controle blijkt dat de opgave van de opdrachtgever niet overeenkomt met de werkelijke gang van zaken, zullen de kosten van deze controle voor rekening van de opdrachtgever komen. 
+Artikel 7.	Betaling
+7.1	Betalingsverplichting 
+Betalingen dienen plaats te vinden binnen 14 dagen na factuurdatum. Indien na het verstrijken van deze termijn door Motorrr nog geen (volledige) betaling is ontvangen, is de opdrachtgever in verzuim en is hij een rente verschuldigd gelijk aan de wettelijke rente. Alle door Motorrr gemaakte kosten, zoals proceskosten en buitengerechtelijke en gerechtelijke kosten, daaronder begrepen de kosten voor juridische bijstand, deurwaarders en incassobureaus, gemaakt in verband met te late betalingen, komen ten laste van de opdrachtgever. De buitengerechtelijke kosten worden gesteld op ten minste 10% van het factuurbedrag met een minimum van €200,-.
+7.2	Periodieke betalingen 
+Motorrr heeft het recht zijn honorarium maandelijks in rekening te brengen voor verrichte werkzaamheden en gemaakte kosten ten behoeve van de uitvoering van de opdracht.
+7.3	Geen korting of compensatie 
+De opdrachtgever verricht de aan Motorrr verschuldigde betalingen zonder korting of compensatie, behoudens verrekening met op de overeenkomst betrekking hebbende verrekenbare voorschotten, die hij aan Motorrr heeft verstrekt.
+7.4	Vervallen licentie 
+Vanaf het moment dat de opdrachtgever zijn betalingsverplichtingen uit hoofde van de overeenkomst niet (volledig) nakomt of anderszins in gebreke is, is het de opdrachtgever niet (langer) toegestaan de ter beschikking gestelde resultaten te gebruiken en komt elke in het kader van de opdracht aan de opdrachtgever verstrekte licentie te vervallen, tenzij de tekortkoming van de opdrachtgever in het licht van de gehele opdracht van ondergeschikte betekenis is. 
+Artikel 8.	Opzegging en ontbinding overeenkomst
+8.1	Opzegging overeenkomst door opdrachtgever 
+Wanneer de opdrachtgever een overeenkomst opzegt, dient hij, naast een schadevergoeding, het honorarium en de gemaakte kosten met betrekking tot de tot dan verrichte werkzaamheden te betalen.
+8.2	Ontbinding overeenkomst door Motorrr 
+Indien de overeenkomst door Motorrr wordt ontbonden wegens een toerekenbare tekortkoming in de nakoming van de overeenkomst door de opdrachtgever, dient de opdrachtgever, naast een schadevergoeding, het honorarium en de gemaakte kosten met betrekking tot de tot dan verrichte werkzaamheden te betalen. Gedragingen van de opdrachtgever op grond waarvan van Motorrr redelijkerwijs niet meer gevergd kan worden dat de opdracht wordt afgerond, worden in dit verband mede beschouwd als toerekenbare tekortkoming.
+8.3	Schadevergoeding 
+De schadevergoeding bedoeld in de vorige twee leden van dit artikel zal tenminste omvatten de kosten voortvloeiend uit de door Motorrr op eigen naam voor de vervulling van de opdracht aangegane verbintenissen met derden, alsmede 30% van het resterende deel van het honorarium welke de opdrachtgever bij volledige vervulling van de opdracht verschuldigd zou zijn.
+8.4	Faillissement
+Zowel Motorrr als de opdrachtgever hebben het recht de overeenkomst onmiddellijk geheel of gedeeltelijk te ontbinden in geval van faillissement of surseance van de andere partij.
+8.5	Gebruik resultaat na voortijdige beëindiging 
+Indien de opdracht, om welke reden dan ook, voortijdig wordt beëindigd, is het de opdrachtgever niet (langer) toegestaan de hem ter beschikking gestelde ontwerpen te gebruiken en komt elke in het kader van de opdracht aan de opdrachtgever verstrekte licentie te vervallen.
+8.6	Duurovereenkomsten 
+Wanneer de werkzaamheden van Motorrr bestaan uit het bij herhaling verrichten van soortgelijke werkzaamheden, dan zal de daarvoor geldende overeenkomst, tenzij schriftelijk anders is overeengekomen, gelden voor onbepaalde tijd. Deze overeenkomst kan slechts worden beëindigd door schriftelijke opzegging, met inachtneming van een redelijke opzegtermijn van ten minste twee maanden. 
+Artikel 9.	Garanties en vrijwaringen
+9.1	Auteursrechthebbende 
+Motorrr garandeert dat het geleverde door of vanwege haar is ontworpen en dat, indien er auteursrecht op het ontwerp rust, zij geldt als maker in de zin van de Auteurswet en als auteursrechthebbende over het werk kan beschikken.
+9.2	Vrijwaring voor aanspraken m.b.t. gebruik ontwerp 
+De opdrachtgever vrijwaart Motorrr of door Motorrr bij de opdracht ingeschakelde personen voor alle aanspraken van derden voortvloeiend uit de toepassingen of het gebruik van het resultaat van de opdracht.
+9.3	Verstrekte materialen en gegevens 
+De opdrachtgever vrijwaart Motorrr voor aanspraken met betrekking tot rechten van intellectuele eigendom op door de opdrachtgever verstrekte materialen of gegevens, die bij de uitvoering van de opdracht worden gebruikt. 
+Artikel 10.	Aansprakelijkheid
+10.1	Aansprakelijkheid 
+Motorrr kan niet aansprakelijk worden gesteld voor: 
+a.	fouten in het materiaal dat door de opdrachtgever ter hand is gesteld. 
+b.	misverstanden of fouten ten aanzien van de uitvoering van de overeenkomst indien deze hun aanleiding of oorzaak vinden in handelingen van de opdrachtgever, zoals het niet tijdig of niet aanleveren van volledige, deugdelijke en duidelijke gegevens/materialen. 
+c.	fouten van door of namens de opdrachtgever ingeschakelde derden. 
+d.	gebreken in offertes van toeleveranciers of voor overschrijdingen van prijsopgaven van toeleveranciers. 
+e.	fouten in het ontwerp of de tekst/gegevens, indien de opdrachtgever zijn goedkeuring heeft gegeven, dan wel in de gelegenheid is gesteld een controle uit te voeren en te kennen heeft gegeven aan een dergelijke controle geen behoefte te hebben. 
+f.	fouten in het ontwerp of de tekst/gegevens, indien de opdrachtgever het tot stand brengen of laten uitvoeren van een bepaald(e) model, prototype of proef achterwege heeft gelaten, en deze fouten in een dergelijk(e) model, prototype of proef wel waarneembaar zouden zijn geweest.
+10.2	Beperking aansprakelijkheid 
+Behoudens in geval van opzet of grove schuld van Motorrr of de bedrijfsleiding van Motorrr, is de aansprakelijkheid van Motorrr voor schade uit hoofde van een overeenkomst of van een jegens de opdrachtgever gepleegde onrechtmatige daad, beperkt tot een bedrag dat in redelijkheid in verhouding staat tot de omvang van de opdracht, met dien verstande dat dit bedrag niet hoger zal zijn dan € 20.000,- of, indien het aan de opdracht verbonden honorarium hoger is, het bedrag van dit honorarium verminderd met de out-of-pocket kosten.
+Motorrr is niet aansprakelijk voor indirecte schade geleden door de opdrachtgever.
+10.3	Overmacht 
+In geval Motorrr door overmacht wordt verhinderd de overeengekomen werkzaamheden geheel of gedeeltelijk en/of tijdig uit te voeren, heeft Motorrr het recht om zonder gerechtelijke tussenkomst de uitvoering van de betreffende overeenkomst op te schorten of de overeenkomst geheel of gedeeltelijk te ontbinden door middel van een schriftelijke verklaring, zonder dat Motorrr tot enige schadevergoeding of garantie is gehouden. 
+Onder overmacht wordt onder meer verstaan: staking, uitsluiting, brand, machinebreuk en andere bedrijfs stoornissen, hetzij bij Motorrr hetzij bij zijn leveranciers, transport storingen en andere buiten zijn macht liggende gebeurtenissen, zoals oorlog, blokkade, oproer, epidemie, devaluatie, overstroming en stormen, alsmede plotselinge verhoging van invoerrechten en accijnzen en/of belastingen, vertraging of uitblijven van levering door leveranciers, het niet verkrijgen van benodigde vergunningen en andere overheidsmaatregelen.
+10.4	Verval aansprakelijkheid 
+Elke aansprakelijkheid vervalt door het verloop van één jaar vanaf het moment dat de opdracht is voltooid.
+10.5	Kopieën materialen 
+De opdrachtgever is gehouden, indien redelijkerwijs mogelijk, kopieën van door hem verstrekte materialen en gegevens onder zich te houden tot de opdracht is vervuld. Indien de opdrachtgever dit nalaat, kan Motorrr niet aansprakelijk worden gesteld voor schade die bij het bestaan van deze kopieën niet was opgetreden.
+10.6	Bewaarplicht 
+Na het voltooien van de opdracht hebben noch de opdrachtgever noch Motorrr jegens elkaar een bewaarplicht met betrekking tot de gebruikte materialen en gegevens.
+Artikel 11.	Overige bepalingen
+11.1	Overdracht aan derden 
+Het is de opdrachtgever niet toegestaan enig recht uit een met Motorrr gesloten overeenkomst aan derden over te dragen, anders dan bij overdracht van zijn gehele onderneming.
+11.2	Vertrouwelijkheid 
+Partijen zijn gehouden feiten en omstandigheden, die in het kader van de opdracht aan de andere partij ter kennis komen, vertrouwelijk te behandelen. Derden, die bij de uitvoering van de opdracht worden betrokken, zullen ten aanzien van deze feiten en omstandigheden afkomstig van de andere partij aan eenzelfde vertrouwelijke behandeling worden gebonden.
+11.3	Opschriften 
+De opschriften in deze algemene voorwaarden dienen slechts om de leesbaarheid te bevorderen en vormen geen onderdeel van deze voorwaarden.
+11.4	Nederlands recht 
+Op de overeenkomst tussen Motorrr en opdrachtgever is het Nederlands recht van toepassing. De rechter tot het kennisnemen van geschillen tussen Motorrr en de opdrachtgever is de bevoegde rechter in het arrondissement waar Motorrr is gevestigd.
+11.5	Wijzingen
+Motorrr behoudt zich het recht voor om van tijd tot tijd wijzigingen door te voeren in deze Algemene Voorwaarden.
